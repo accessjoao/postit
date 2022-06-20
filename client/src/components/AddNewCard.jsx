@@ -4,8 +4,13 @@ export default function AddNewCard({ handleAddCard }) {
 
   const [cardText, setCardText] = useState('');
 
+  const characterLimit = 200;
+
   const handleChange = (event) => {
-    setCardText(event.target.value);
+    if(characterLimit - event.target.value.length >= 0) {
+      setCardText(event.target.value);
+    }
+    
   }
 
   const handleSaveClick = () => {
@@ -23,7 +28,7 @@ export default function AddNewCard({ handleAddCard }) {
       onChange={handleChange}
       ></textarea>
       <div className='card-footer'>
-        <small>200 remaining</small>
+        <small>{characterLimit - cardText.length}</small>
         <button className='save' onClick={handleSaveClick}>Save</button>
       </div>
     </div>
