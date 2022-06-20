@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
 import PostsList from './PostsList'
 import Search from './Search'
@@ -29,6 +29,17 @@ export default function Container() {
   ])
 
   const [searchText, setSearchText] = useState('');
+
+  useEffect(()=> {
+    const savedPosts = JSON.parse(localStorage.getItem('client-app-data'));
+    if(savedPosts) {
+      setPosts(savedPosts)
+    }
+  }, [])
+
+  useEffect(()=> {
+    localStorage.setItem('client-app-data', JSON.stringify(posts))
+  }, [posts])
 
   const addCard = (text) => {
     const date = new Date();
