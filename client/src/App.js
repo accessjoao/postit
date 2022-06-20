@@ -1,10 +1,17 @@
+import { useState } from "react";
 import Container from "./components/Container";
-
+import NavBar from "./components/NavBar";
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(true);
+
   return (
-    <div>
+    <div className={`${darkMode && 'dark-mode'}`}>
+    <div className="container">
+      <NavBar handleToggleDarkMode={setDarkMode}/>
       <Container />
+    </div>
     </div>
   );
 }
