@@ -27,11 +27,22 @@ export default function Container() {
     },
   ])
 
+  const addCard = (text) => {
+    const date = new Date();
+    const newCard = {
+      id: nanoid(),
+      text: text,
+      date: date.toLocaleDateString()
+    }
+    const newCards = [...posts, newCard]
+    setPosts(newCards);
+  }
+
 
 
   return (
     <div className='container'>
-      <PostsList posts={posts}/>
+      <PostsList posts={posts} handleAddCard={addCard}/>
     </div>
   )
 }
