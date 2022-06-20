@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { nanoid } from 'nanoid'
 import PostsList from './PostsList'
+import Search from './Search'
 
 export default function Container() {
 
@@ -47,6 +48,8 @@ export default function Container() {
 
   return (
     <div className='container'>
+      <Search />
+      <br />
       <PostsList posts={posts} handleAddCard={addCard} handleDeleteCard={deleteCard}/>
     </div>
   )
