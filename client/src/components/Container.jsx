@@ -28,6 +28,8 @@ export default function Container() {
     },
   ])
 
+  const [searchText, setSearchText] = useState('');
+
   const addCard = (text) => {
     const date = new Date();
     const newCard = {
@@ -48,9 +50,9 @@ export default function Container() {
 
   return (
     <div className='container'>
-      <Search />
+      <Search handleSearchCard={setSearchText} />
       <br />
-      <PostsList posts={posts} handleAddCard={addCard} handleDeleteCard={deleteCard}/>
+      <PostsList posts={posts.filter((card)=>card.text.toLowerCase().includes(searchText))} handleAddCard={addCard} handleDeleteCard={deleteCard}/>
     </div>
   )
 }
