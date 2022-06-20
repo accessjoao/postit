@@ -38,11 +38,16 @@ export default function Container() {
     setPosts(newCards);
   }
 
+  const deleteCard = (id) => {
+    const newCards = posts.filter((post)=> post.id !== id);
+    setPosts(newCards);
+  }
+
 
 
   return (
     <div className='container'>
-      <PostsList posts={posts} handleAddCard={addCard}/>
+      <PostsList posts={posts} handleAddCard={addCard} handleDeleteCard={deleteCard}/>
     </div>
   )
 }
