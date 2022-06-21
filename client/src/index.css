@@ -76,6 +76,10 @@ textarea:focus {
     cursor: pointer;
 }
 
+.toggle {
+    cursor: pointer;
+}
+
 .card {
     background-color: #ae8b0f;
     border-radius: 10px;

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { nanoid } from 'nanoid'
+import { Icon } from '@iconify/react';
 import PostsList from './PostsList'
 import Search from './Search'
-import { Link } from 'react-router-dom'
+
 
 export default function Container() {
 
@@ -46,7 +48,7 @@ export default function Container() {
 
   return (
     <div className='container'>
-      <Link to="/"><button class="save">Home</button></Link>
+      <Link to="/"><Icon icon="dashicons:admin-home" height={30} style={{ color: 'white' }} /></Link>
       <br />
       <br />
       <Search handleSearchCard={setSearchText} />
