@@ -6,11 +6,15 @@ import { imageData } from "./homepage/Data";
 export default function Home() {
   return (
     <div className="container">
-      <Icon icon="dashicons:admin-post" height={80} style={{ color: 'white' }} />
+      <Icon
+        icon="dashicons:admin-post"
+        height={80}
+        style={{ color: "white" }}
+      />
 
       <div className="home-cards">
-        {imageData.map((slide, index)=> {
-          return <img src={slide.image} alt='posts'/>
+        {imageData.map((slide, index) => {
+          return <img src={slide.image} alt="posts" />;
         })}
       </div>
 

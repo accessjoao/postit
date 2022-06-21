@@ -15,7 +15,7 @@ at any point.
 
 ## Getting Started
 
-* On the client folder
+* On the client folder:
 
    ```sh
    npm install
