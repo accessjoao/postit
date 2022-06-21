@@ -1,0 +1,20 @@
+{
+  "name": "ensemble_postit",
+  "version": "1.0.0",
+  "description": "I created this app so the user doesn't have to\r worry about putting post its everywhere around their\r desk on a work day.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accessjoao/ensemble_postit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/accessjoao/ensemble_postit/issues"
+  },
+  "homepage": "https://github.com/accessjoao/ensemble_postit#readme"
+}
