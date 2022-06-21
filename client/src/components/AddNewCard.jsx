@@ -4,7 +4,7 @@ export default function AddNewCard({ handleAddCard }) {
 
   const [cardText, setCardText] = useState('');
 
-  const characterLimit = 200;
+  const characterLimit = 100;
 
   const handleChange = (event) => {
     if(characterLimit - event.target.value.length >= 0) {

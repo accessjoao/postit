@@ -16,15 +16,19 @@ code {
 }
 
 .dark-mode {
-    background-color: #39250b;
+    background-color: #0b0c10;
 }
 
 .light-mode {
-    background-color: #d2a922;
+    background-color: #DBB12A;
 }
 
 .dark-mode h1 {
     color: #DBB12A;
+}
+
+.light-mode h1 {
+    color: #0b0c10
 }
 
 .container {
@@ -43,13 +47,17 @@ code {
 }
 
 .card.new {
-    background-color: #734B1A;
+    background-color: #88dbdc;
+}
+
+.card.new:hover {
+    transform: scale(1.1);
 }
 
 textarea {
     border: none;
     resize: none;
-    background-color: #734B1A;
+    background-color: #88dbdc;
 }
 
 textarea:focus {
@@ -78,6 +86,10 @@ textarea:focus {
     justify-content: space-between;
     white-space: pre-wrap;
     overflow-x: hidden;
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card-footer {
