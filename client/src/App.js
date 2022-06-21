@@ -7,7 +7,7 @@ function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <div className={`${darkMode && 'dark-mode'}`}>
+    <div className={`${darkMode ? 'dark-mode' : 'light-mode'}`}>
     <div className="container">
       <NavBar handleToggleDarkMode={setDarkMode}/>
       <Container />

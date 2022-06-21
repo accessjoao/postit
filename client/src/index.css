@@ -16,11 +16,15 @@ code {
 }
 
 .dark-mode {
-    background-color: black;
+    background-color: #39250b;
+}
+
+.light-mode {
+    background-color: #d2a922;
 }
 
 .dark-mode h1 {
-    color: white;
+    color: #DBB12A;
 }
 
 .container {
@@ -39,13 +43,13 @@ code {
 }
 
 .card.new {
-    background-color: blueviolet;
+    background-color: #734B1A;
 }
 
 textarea {
     border: none;
     resize: none;
-    background-color: blueviolet;
+    background-color: #734B1A;
 }
 
 textarea:focus {
@@ -65,7 +69,7 @@ textarea:focus {
 }
 
 .card {
-    background-color: #3e7d8e;
+    background-color: #ae8b0f;
     border-radius: 10px;
     padding: 1rem;
     min-height: 170px;

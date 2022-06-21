@@ -8,24 +8,8 @@ export default function Container() {
   const [posts, setPosts] = useState([
     {
       id: nanoid(),
-      text: "this is my first note",
-      date: '20/06/2022'
-    },
-    {
-      id: nanoid(),
-      text: "this is my second note",
-      date: '20/06/2022'
-    },
-    {
-      id: nanoid(),
-      text: "this is my third note",
-      date: '20/06/2022'
-    },
-    {
-      id: nanoid(),
-      text: "this is my fourth note",
-      date: '20/06/2022'
-    },
+      text: "Welcome! Today is going to be a great day!"
+    }
   ])
 
   const [searchText, setSearchText] = useState('');
@@ -63,7 +47,7 @@ export default function Container() {
     <div className='container'>
       <Search handleSearchCard={setSearchText} />
       <br />
-      <PostsList posts={posts.filter((card)=>card.text.toLowerCase().includes(searchText))} handleAddCard={addCard} handleDeleteCard={deleteCard}/>
+      <PostsList posts={posts.filter((card)=>card.text.toLowerCase().includes(searchText.toLowerCase()))} handleAddCard={addCard} handleDeleteCard={deleteCard}/>
     </div>
   )
 }

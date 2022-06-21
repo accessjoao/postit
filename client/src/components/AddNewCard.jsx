@@ -23,7 +23,7 @@ export default function AddNewCard({ handleAddCard }) {
 
   return (
     <div className='card new'>
-      <textarea rows='8' cols='10' placeholder='Add a new note'
+      <textarea rows='8' cols='10' placeholder='Post It!'
       value={cardText}
       onChange={handleChange}
       ></textarea>
