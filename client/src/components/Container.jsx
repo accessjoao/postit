@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
 import PostsList from './PostsList'
 import Search from './Search'
+import { Link } from 'react-router-dom'
 
 export default function Container() {
 
@@ -45,6 +46,9 @@ export default function Container() {
 
   return (
     <div className='container'>
+      <Link to="/"><button class="save">Home</button></Link>
+      <br />
+      <br />
       <Search handleSearchCard={setSearchText} />
       <br />
       <PostsList posts={posts.filter((card)=>card.text.toLowerCase().includes(searchText.toLowerCase()))} handleAddCard={addCard} handleDeleteCard={deleteCard}/>
