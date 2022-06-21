@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Container from "./components/Container";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 
@@ -15,11 +16,14 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cards" element={<Container />} />
+            <Route path="/posts" element={<Container />} />
           </Routes>
         </BrowserRouter>
 
+       <Footer />
+
       </div>
+ 
     </div>
   );
 }

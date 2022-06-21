@@ -1,21 +1,26 @@
+import { Icon } from "@iconify/react";
 import React from "react";
 import { Link } from "react-router-dom";
-import { sliderData } from "./homepage/Data";
+import { imageData } from "./homepage/Data";
 
 export default function Home() {
   return (
     <div className="container">
-      <h1>JOAO</h1>
+      <Icon icon="dashicons:admin-post" height={80} style={{ color: 'white' }} />
 
-      <div>
-        {sliderData.map((slide, index)=> {
+      <div className="home-cards">
+        {imageData.map((slide, index)=> {
           return <img src={slide.image} alt='posts'/>
         })}
       </div>
 
-      <Link to="/cards">
+      <br />
+
+      <Link to="/posts">
         <button className="save">Get Started!</button>
       </Link>
+      <br />
+      <br />
     </div>
   );
 }

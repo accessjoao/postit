@@ -102,6 +102,15 @@ textarea:focus {
     justify-content: space-between;
 }
 
+.home-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
 .delete-icon {
     cursor: pointer;
 }
@@ -122,4 +131,18 @@ textarea:focus {
 
 .search input:focus {
     outline: none;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 50px;
+    color: white;
+}
+
+.email {
+    cursor: pointer;
 }
